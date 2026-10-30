@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui-workflow-inspector"
+version = "0.1.0"
+description = "Inspect exported ComfyUI workflow JSON files from the command line."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Praveen Bhatt"}]
+keywords = ["comfyui", "workflow", "generative-ai", "json", "cli"]
+
+[project.scripts]
+comfy-inspect = "comfyui_workflow_inspector.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
